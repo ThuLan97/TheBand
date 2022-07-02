@@ -35,10 +35,10 @@ html {
     margin-right: -8px;
 }
 .mt-8 {
-    margin-top: 8px; !important
+    margin-top: 8px !important;
 }
 .mt-16 {
-    margin-top: 16px; !important
+    margin-top: 16px !important;
 }
 .col {
     float: left;
@@ -56,11 +56,11 @@ html {
 }
 
 .text-center {
-    text-align: center; !important;
+    text-align: center !important;
 }
-#main {
+/* #main {
 
-}
+} */
 .text-white {
     color: white !important;
 }
@@ -75,6 +75,7 @@ html {
     right: 0;
     left: 0;
     z-index: 1;
+    overflow: hidden;
 }
 #nav {
     display: inline-block;
@@ -113,14 +114,23 @@ html {
     display: none;
     min-width: 160px;
 }
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
-    cursor: pointer;
 }
+
 #header .search-btn:hover {
+    cursor: pointer;
     background-color: #f44336;
 }
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
@@ -157,14 +167,17 @@ html {
     font-size: 15px;
     margin-top: 25px;
 }
-#content {
+/* #content {
     
-}
+} */
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .section-heading {
     font-size: 30px;
@@ -407,4 +420,13 @@ html {
 #footer .coppyright a {
     color: rgba(0, 0, 0, 0.6);
 
+}
+ /*mobile*/
+@media (max-width: 750px) {
+    #nav > li {
+        display: block;
+    }
+    #header .search-btn {
+        display: none;
+    }
 }
